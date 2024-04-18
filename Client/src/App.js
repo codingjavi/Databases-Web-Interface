@@ -1,5 +1,6 @@
 //THIS IS WHERE WE PUT OUR COMPONENTS IN 
 import React, { useState, useEffect } from 'react'
+import './App.css'
 
 function App() {
   const [formData, setFormData] = useState({
@@ -64,8 +65,8 @@ function App() {
   };
 
   return (
-    <div>
-      <div>
+    <div className="form-container">
+      <div >
         <div>
           <label>
             InstructorId:
@@ -144,7 +145,7 @@ function App() {
           </label>
         </div>
         <button onClick={handleSubmit}>Add Instructor</button>
-        {message2 && <div>{message2.message}</div>} {/* Render message2.message */}
+        {message2 && <div className="message">{message2.message}</div>} {/* Render message2.message */}
       </div>
   
       <div>
@@ -157,7 +158,7 @@ function App() {
           />
         </label>
         <button onClick={handleDelete}>Delete Student</button>
-        {message1 && <div>{message1}</div>}
+        {message1 && <div className="message">{message1}</div>}
       </div>
     </div>
   )

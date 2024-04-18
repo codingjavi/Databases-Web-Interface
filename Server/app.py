@@ -104,6 +104,10 @@ def input():
         Rank = data.get('Rank')
         Type = data.get('Type')
 
+        existing_instructor = Instructor.query.filter_by(InstructorId=InstructorId).first()
+        if existing_instructor:
+            #return jsonify({'error': 'InstructorId already in use'}), 201
+            return jsonify({'message': f'InstructorId already in use'}), 201
         new_instructor = Instructor(
             InstructorId=InstructorId,
             FName=FName,
