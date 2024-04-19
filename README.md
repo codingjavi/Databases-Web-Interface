@@ -2,10 +2,23 @@
 
 Created a web interface for my Database and File Systems class.
 
+## How web interface works
+- Used a React front end to display results and ask for user inputs for the queries
+- Called APIs stored in the Flask server from the front end when user clicks buttons
+- The backend Flask server connects to the database using flask_sqlalchemy
+- Execute desired queries in Flask APIs 
+
+## Languages Used
+- Python
+- Javascript
+- CSS/HTML
+
 ## Running the website
-1. In the server directory run: python3 server.py
-2. Install nessecary packages for Client directory: npm install
-3. Run the front end: npm start
+1. Install nessecary packages for Server (Flask, SQLalchemy, flask_sqlalchemy, Python)
+2. In the server directory run: python3 server.py
+3. Run the mysql database
+4. Install nessecary packages for Client directory: npm install
+5. Run the front end: npm start
 
 ## Features
 - Insert a new instructor with attributes in the database.

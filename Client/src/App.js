@@ -1,4 +1,3 @@
-//THIS IS WHERE WE PUT OUR COMPONENTS IN 
 import React, { useState, useEffect } from 'react'
 import './App.css'
 
