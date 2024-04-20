@@ -1,9 +1,12 @@
+/*
+Javier Pacheco 1001906862
+John Costa 1001817244
+*/
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-//import './styles/tailwind.css';
-  //provider makes sure all components have access to provided value
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>

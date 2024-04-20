@@ -4,9 +4,12 @@ Created a web interface for my Database and File Systems class.
 
 ## How web interface works
 - Used a React front end to display results and ask for user inputs for the queries
+- The main front end code is in the App.js file in the source directory
+- The index.js renders the App.js component when ran
 - Called APIs stored in the Flask server from the front end when user clicks buttons
 - The backend Flask server connects to the database using flask_sqlalchemy
 - Execute desired queries in Flask APIs 
+- Stored models of tables we were going to use 
 
 ## Languages Used
 - Python

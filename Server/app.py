@@ -1,3 +1,8 @@
+'''
+Javier Pacheco 1001906862
+John Costa 1001817244
+'''
+
 from crypt import methods
 from flask import Flask, render_template, url_for, request, flash, session, redirect, jsonify, make_response, Blueprint, abort
 from flask_sqlalchemy import SQLAlchemy

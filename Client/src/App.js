@@ -1,3 +1,8 @@
+/*
+Javier Pacheco 1001906862
+John Costa 1001817244
+*/
+
 import React, { useState, useEffect } from 'react'
 import './App.css'
 
@@ -54,12 +59,10 @@ function App() {
     .then(data => {
       console.log(data);
       setMessage2(data)
-      // Handle success response if needed
     })
     .catch(error => {
       setMessage2(error)
       console.error('Error adding instructor:', error);
-      // Handle error if needed
     });
   };
 
@@ -144,7 +147,7 @@ function App() {
           </label>
         </div>
         <button onClick={handleSubmit}>Add Instructor</button>
-        {message2 && <div className="message">{message2.message}</div>} {/* Render message2.message */}
+        {message2 && <div className="message">{message2.message}</div>}
       </div>
   
       <div>
