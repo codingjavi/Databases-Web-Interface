@@ -21,9 +21,7 @@ class Instructor(db.Model):
     Rank = db.Column(db.String(30))
     Type = db.Column(db.String(10))
 
-    def __repr__(self):
-        return f"Instructor(InstructorId={self.InstructorId}, FName={self.FName}, LName={self.LName}, StartDate={self.StartDate}, Degree={self.Degree}, Rank={self.Rank}, Type={self.Type})"
-
+    
 class PhdStudent(db.Model):
     __tablename__ = 'PHD_STUDENT'
 
@@ -34,9 +32,7 @@ class PhdStudent(db.Model):
     StYear = db.Column(db.Integer, nullable=False)
     Supervisor = db.Column(db.String(6), db.ForeignKey('INSTRUCTOR.InstructorId'))
 
-    def __repr__(self):
-        return f"PhdStudent(StudentId={self.StudentId}, FName={self.FName}, LNname={self.LNname}, StSem={self.StSem}, StYear={self.StYear}, Supervisor={self.Supervisor})"
-
+   
 class GRA(db.Model):
     __tablename__ = 'GRA'
 
@@ -45,9 +41,7 @@ class GRA(db.Model):
     MonthlyPay = db.Column(db.Integer, nullable=False)
     MajaorResearchArea = db.Column(db.String(20), nullable=False)
 
-    def __repr__(self):
-        return f"GRA(StudentId={self.StudentId}, GrantID={self.GrantID}, MonthlyPay={self.MonthlyPay}, MajaorResearchArea={self.MajaorResearchArea})"
-
+    
 class MilestonesPassed(db.Model):
     __tablename__ = 'MILESTONESPASSED'
 
@@ -55,36 +49,28 @@ class MilestonesPassed(db.Model):
     MId = db.Column(db.String(2), primary_key=True)
     PassDate = db.Column(db.Date, nullable=False)
 
-    def __repr__(self):
-        return f"MilestonesPassed(StudentId={self.StudentId}, MId={self.MId}, PassDate={self.PassDate})"
-
+    
 class Course(db.Model):
     __tablename__ = 'COURSE'
 
     CourseID = db.Column(db.String(7), primary_key=True)
     CName = db.Column(db.String(40), unique=True, nullable=False)
 
-    def __repr__(self):
-        return f"Course(CourseID={self.CourseID}, CName={self.CName})"
-
+    
 class PhdCommittee(db.Model):
     __tablename__ = 'PHDCOMMITTEE'
 
     StudentId = db.Column(db.String(6), primary_key=True)
     InstructorId = db.Column(db.String(6), primary_key=True)
 
-    def __repr__(self):
-        return f"PhdCommittee(StudentId={self.StudentId}, InstructorId={self.InstructorId})"
-
+    
 class CoursesTaught(db.Model):
     __tablename__ = 'COURSESTAUGHT'
 
     CourseID = db.Column(db.String(7), primary_key=True)
     InstructorId = db.Column(db.String(6), primary_key=True)
 
-    def __repr__(self):
-        return f"CoursesTaught(CourseID={self.CourseID}, InstructorId={self.InstructorId})"
-
+    
 def after_request(response):
     header = response.headers
     header['Access-Control-Allow-Origin'] = '*'
